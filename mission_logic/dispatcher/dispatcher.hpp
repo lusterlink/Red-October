@@ -4,17 +4,6 @@
    It then sends the messages to the motion commander or the sensor
    commander.
 
-   For example: The master command would generate a command similar to
-   Perform validation gate.
-
-   The dispatch would recieve this command and generate the following
-   sequence of commands.
-
-   Normalize Submerine Motion
-   Righten Sumberine Position
-   Generate Path to New Point
-   Sequentially Send Each Point to Motion
-
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
    the Free Software Foundation, either version 3 of the License, or

@@ -1,0 +1,21 @@
+================================================================================
+Canonical Command Name:				Initialize All Submodules
+Command Call Name:					INIT_ALL
+Arguments:							NONE
+Returns:                            SUCCESS | FAILURE
+Catagory:						    Initialization
+Author:
+Description: This command should be passed once per compeition from the
+master commander to the dispatcher to signal that all initalizations should now
+be performed and any errors logged.
+================================================================================
+Canonical Command Name:				Go Foward
+Command Call Name:					GO_FWD
+Arguments: 							m Meters
+		The number of meters to go forward.
+Returns:                            SUCCESS | FAILURE
+Catagory:	                        Motion Displacement
+Author:
+Description: This command should be used to move the entire submerine m meters
+forward.  That is to say, translate the submerine frame m meters along the x
+axis in the submerine frame.
