@@ -1,39 +1,39 @@
 ================================================================================
-Canonical Command Name:				Initialize All Motion Submodules
-Command Call Name:					INT_MOT_ALL
-Arguments:							NONE
+Canonical Command Name:             Initialize All Motion Submodules
+Command Call Name:                  INT_MOT_ALL
+Arguments:                          NONE
 Returns:                            SUCCESS | FAILURE
-Catagory:						    Initialization
+Catagory:                           Initialization
 Author:
 Description: This command should be passed once per compeition from the
 dispatcher to the motion dispatcher signaling all motion submodules should be
 initialized and any errors logged.
 ================================================================================
-Canonical Command Name:				Initialize All Sensor Submodules
-Command Call Name:					INT_SEN_ALL
-Arguments:							NONE
+Canonical Command Name:	            Initialize All Sensor Submodules
+Command Call Name:                  INT_SEN_ALL
+Arguments:                          NONE
 Returns:                            SUCCESS | FAILURE
-Catagory:						    Initialization
+Catagory:                           Initialization
 Author:
 Description: This command should be passed once per compeition from the
 dispatcher to the sensor dispatcher signaling all sensor submodules should be
 initialized and any errors logged.
 ================================================================================
-Canonical Command Name:				Set Displacement Velocity
-Command Call Name:					MOT_THR_SET_VEL
-Arguments: 							x Meters/sec
+Canonical Command Name:             Set Displacement Velocity
+Command Call Name:                  MOT_THR_SET_VEL
+Arguments:                          x Meters/sec
          The x-component of the desired velocity vector
                                     y Meters/sec
-		 The y-component of the desired velocity vector
+         The y-component of the desired velocity vector
                                     z Meters/sec
-		 The z-component of the desired velocity vector
+         The z-component of the desired velocity vector
 Returns:                            SUCCESS | FAILURE
-Catagory:	                        Motion Displacement
+Catagory:                           Motion Displacement
 Author:
 Description: This command should be used to set the instaneous velocity of the
 submerine within the submerine base frame.
 ================================================================================
-Canonical Command Name:				Get Position Vector
+Canonical Command Name:	            Get Position Vector
 Command Call Name:                  SEN_IMU_GET_POS
 Arguments:                          NONE
 Returns:                            x Meters
@@ -42,7 +42,7 @@ Returns:                            x Meters
          The y-component of the position vector measured from last reset point.
                                     z Meters
          The z-component of the position vector measured from last rest point.
-Catagory:	                        Sensor Displacment
+Catagory:                           Sensor Displacment
 Author:
 Description: This command should be used to pool the position vector of the
 submerine base frame from the last reset point.  This will be used in the

@@ -4,4 +4,4 @@ Canonical Frame Name: 						Submerine Base Frame
 Frame Call Name:							FRM_SUB_BASE
 Location:
 This has its origin at _____ with its x-axis out the front of the submerine
-and its z-axis out the top of the subermine.
+, its z-axis out the top of the subermine.

@@ -666,7 +666,7 @@ void ControlledSharedMemory::cleanupUpdateThreadData(void){
     }
 }
 
-int unitTest(void){
+int ControlledSharedMemory::unitTest(void){
 
 
 }

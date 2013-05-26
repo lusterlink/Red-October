@@ -1,21 +1,94 @@
+The below commands are designed for being passed from the master commander to
+the dispatcher.  Therefore, the commands are quite general and do not focus
+on specifics of the hardware implemenations.
 ================================================================================
-Canonical Command Name:				Initialize All Submodules
-Command Call Name:					INIT_ALL
-Arguments:							NONE
+Canonical Command Name:             Initialize All Submodules
+Command Call Name:                  INIT_ALL
+Arguments:                          NONE
 Returns:                            SUCCESS | FAILURE
-Catagory:						    Initialization
+Catagory:                           Initialization
 Author:
 Description: This command should be passed once per compeition from the
 master commander to the dispatcher to signal that all initalizations should now
 be performed and any errors logged.
 ================================================================================
-Canonical Command Name:				Go Foward
-Command Call Name:					GO_FWD
-Arguments: 							m Meters
-		The number of meters to go forward.
+Canonical Command Name:	            Go Forward
+Command Call Name:                  GO_FWD
+Arguments:                          m Meters
+         The number of meters to go forward.
 Returns:                            SUCCESS | FAILURE
-Catagory:	                        Motion Displacement
+Catagory:                           Motion Displacement
 Author:
 Description: This command should be used to move the entire submerine m meters
 forward.  That is to say, translate the submerine frame m meters along the x
-axis in the submerine frame.
+axis in the submerine frame.  The number of meters can be negative to indicate
+the displacement should be in reverse.
+================================================================================
+Canonical Command Name:	            Go Left
+Command Call Name:                  GO_LEFT
+Arguments:                          m Meters
+         The number of meters to go right.
+Returns:                            SUCCESS | FAILURE
+Catagory:                           Motion Displacement
+Author:
+Description: This command should be used to move the entire submerine m meters
+to the right.  This keeps the current heading and simply shifts the submerine
+m meters in the positive y axis in the submerine frame.  The nubmer of meters
+can be negative to indicate the displacement should be along the negative
+y axis instead.
+================================================================================
+Canonical Command Name:             Go To Waypoint
+Command Call Name:                  GO_TO_WAY
+Arguments:                          x Meters
+         The x coordinate of waypoint location in submerine frame.
+                                    y Meters
+         The y coordinate of waypoint location in submerine frame.
+                                    z Meters
+         The z coordinate of waypoint location in submerine frame.
+Returns:                            SUCCESS | FAILURE
+Catagory:                           Motion Displacement
+Author:
+Description: This command should be used to the align the origin of the
+submerine frame with the specified waypoint location.  The heading vector
+of the submerine should be the same in the initial and final configurations
+of the submerine.
+================================================================================
+Canonical Command Name:             Set RPY
+Command Call Name:                  SET_RPY
+Arguments:                          r Radians
+         The delta roll in radians to perform.
+                                    p Radians
+         The delta pitch in radians to perform.
+                                    y Radians
+         The delta yaw in radians to perofrm.
+Returns:                            SUCCESS | FAILURE
+Catagory:                           Motion Displacement
+Author:
+Description: This command should be used to adjust the heading vector of the
+submerine by adding the specified deltas to the existing roll, pitch, and yaw
+and rotating the submerine keeping the origin in place to meet those
+specifications.
+================================================================================
+Canonical Command Name:             Find Path
+Command Call Name:                  FIND_PATH
+Arguments:                          None
+Returns:                            SUCCESS | FAILURE
+                                    x Meters
+       The x coordinate in submerine frame of start of path vec, if found.
+                                    y Meters
+       The y coordinate in submerine frame of start of path vec, if found.
+                                    z Meters
+       The z coordinate in submerine frame of start of path vec, if found.
+                                    dx Meters
+       The x coordinate in submerine frame of path vec, if found.
+                                    dy Meters
+       The y coordinate in submerine frame of path vec, if found.
+                                    dz Meters
+       The z coordinate in submerine frame of path vec, if found.
+Catagory:                           Motion Displacement
+Author:
+Description: This command should be used to adjust the heading vector of the
+submerine by adding the specified deltas to the existing roll, pitch, and yaw
+and rotating the submerine keeping the origin in place to meet those
+specifications.
+================================================================================
