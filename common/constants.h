@@ -1,10 +1,8 @@
-#ifndef __CAMERA_H_
-#define __CAMERA_H_
+#ifndef __CONSTANTS_H_
+#define __CONSTANTS_H_
 /**
-   Welcome to the camera class.  This class defines an interface to
-   which to interact with the Point Grey Bumblebee2 Cameras.  This
-   utilizes the FlyCapture and Tricyclops libraries to perform the
-   image capture and retification.
+   Welcome to the constants file.  This is where the magic numbers
+   go.
 
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -20,15 +18,6 @@
    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include <flycapture/FlyCapture2.h>
-
-class Camera {
-  public:
-    initialize();
 
 
-
-};
-
-
-#endif / *#ifndef __CAMERA_H_ */
+#endif /* #ifndef __CONSTANTS_H_ */
