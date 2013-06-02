@@ -85,10 +85,61 @@ Returns:                            SUCCESS | FAILURE
        The y coordinate in submerine frame of path vec, if found.
                                     dz Meters
        The z coordinate in submerine frame of path vec, if found.
-Catagory:                           Motion Displacement
+Catagory:                           Vision Detection
 Author:
-Description: This command should be used to adjust the heading vector of the
-submerine by adding the specified deltas to the existing roll, pitch, and yaw
-and rotating the submerine keeping the origin in place to meet those
-specifications.
+Description: This command should be used to interface with the vision system
+to find the yellow path that runs along the bottom of the competition pool.
+This command should be used to determine if we have found a path or not.
+If we have not found path, the subermine should rotated in a specified direction
+that depends on the current task that the subermine has just accomplished.
+Therefore, this command should be used in conjunction with the FOLLOW_PATH
+command.
+================================================================================
+Canonical Command Name:             Follow Path
+Command Call Name:                  FOLLOW_PATH
+Arguments:                          d Meters
+       The distance along the path vector for the subermine to travel along.
+Returns:                            SUCCESS | FAILURE
+Catagory:                           Vision Detection
+Author:
+Description: This command should be used to accomplish the following after first
+a call to FIND_PATH and therefore, this command should assume a path is found in
+current vision field.  Once this is so, this command shall take the submerine
+first keeping its rotation angle constant to the detected beginning of the path.
+After arriving at this translation location, the subermine shall then change
+its rotation angle to align with the detected direction of the path.  The final
+step shall consist of the submerine following the detected direction for
+the specified number of meters.  This command should make heavy use of other
+previously defined commands.
+================================================================================
+Canonical Command Name:             Get Parking Bar Vector
+Command Call Name:                  GET_PARK_BAR_Vectr
+Arguments:                          None
+Returns:                            SUCCESS | FAILURE
+                                    x Meters
+       The x coordinate in the submerine frame of the start of the bar vector,
+           if found.
+                                    y Meters
+       The y coordinate in the submerine frame of the start of the bar vector,
+           if found.
+                                    z Meters
+       The z coordinate in the submerine frame of the start of the bar vector,
+           if found.
+                                    dx Meters
+       The x coordinate in the submerine frame of the bar vector, if found.
+                                    dy Meters
+       The y coordinate in the submerine frame of the bar vector, if found.
+                                    dz Meters
+       The z coordinate in the submerine frame of the bar vector, if found.
+Catagory:                           Vision Detection
+Author:
+Description: This command should be used to accomplish the following after first
+a call to FIND_PATH and therefore, this command should assume a path is found in
+current vision field.  Once this is so, this command shall take the submerine
+first keeping its rotation angle constant to the detected beginning of the path.
+After arriving at this translation location, the subermine shall then change
+its rotation angle to align with the detected direction of the path.  The final
+step shall consist of the submerine following the detected direction for
+the specified number of meters.  This command should make heavy use of other
+previously defined commands.
 ================================================================================

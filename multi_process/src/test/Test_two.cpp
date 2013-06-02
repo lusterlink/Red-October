@@ -16,8 +16,6 @@ void* read_test_callback(void * in){
     return NULL;
 }
 
-
-
 void* write_test_callback(void *_){
     printf("In test write callback.\n");
     write_data = 1;

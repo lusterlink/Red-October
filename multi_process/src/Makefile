@@ -25,6 +25,10 @@ all: lib
 lib: $(LIB)
 test: test_one test_two
 
+run_test: test
+	./test/test_one &
+	./test/test_two
+
 test_one: test/Test_one.cpp
 	$(CPP) -L$(LIBDIR) -o test/$@ $^ $(OBJ) $(TESTINCS) $(CFLAGS) $(TESTLIBS)
 

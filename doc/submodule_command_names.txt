@@ -21,7 +21,8 @@ initialized and any errors logged.
 ================================================================================
 Canonical Command Name:             Set Displacement Velocity
 Command Call Name:                  MOT_THR_SET_VEL
-Arguments:                          x Meters/sec
+Arguments:                          SUCCESS | FAILURE
+                                    x Meters/sec
          The x-component of the desired velocity vector
                                     y Meters/sec
          The y-component of the desired velocity vector
@@ -36,7 +37,8 @@ submerine within the submerine base frame.
 Canonical Command Name:	            Get Position Vector
 Command Call Name:                  SEN_IMU_GET_POS
 Arguments:                          NONE
-Returns:                            x Meters
+Returns:                            SUCCESS | FAILURE
+                                    x Meters
          The x-component of the position vector measured from last reset point.
                                     y Meters
          The y-component of the position vector measured from last reset point.
@@ -47,4 +49,26 @@ Author:
 Description: This command should be used to pool the position vector of the
 submerine base frame from the last reset point.  This will be used in the
 PID control loops.
+================================================================================
+Canonical Command Name:	            Get Path Vectors
+Command Call Name:                  SEN_CAM_GET_VEC
+Arguments:                          NONE
+Returns:                            SUCCESS | FAILURE
+                                    x Meters
+       The x coordinate in submerine frame of start of path vec, if found.
+                                    y Meters
+       The y coordinate in submerine frame of start of path vec, if found.
+                                    z Meters
+       The z coordinate in submerine frame of start of path vec, if found.
+                                    dx Meters
+       The x coordinate in submerine frame of path vec, if found.
+                                    dy Meters
+       The y coordinate in submerine frame of path vec, if found.
+                                    dz Meters
+       The z coordinate in submerine frame of path vec, if found.
+Catagory:                           Vision Detection
+Author:
+Description: This command should be used to get the detected path information
+from the camera module.  It is completely possible that no path is detected.
+It is important that any caller address this common return case.
 ================================================================================
